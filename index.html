@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Invoice to PDF</title>
+  <style>
+  body{
+    width: 100%;
+    }
+  h4{
+    margin-top: 0;
+  }
+  hr {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2px;
+    background-color:#f3f6db;
+    color:gray;
+    border: 0 none;
+  }
+  #tblproduct-details table { 
+  color: #333;
+  font-family:Arial, sans-serif;
+  /*width: 1045px; */
+  border-collapse:collapse;
+  border-spacing: 0; 
+  border-color: gray;
+  }
+  #tblproduct-details th { 
+  border: 1px solid gray; /* No more visible border */
+  height: 30px; 
+    border-spacing: 0; 
+  }
+   #tblproduct-details td { 
+  border-bottom: 1px solid gray; /* No more visible border */
+  height: 30px; 
+    border-spacing: 0; 
+  }
+  #tblproduct-details th {
+  background: #DFDFDF;  /* Darken header a bit */
+  font-weight: bold;
+  }
+    .desc{
+      font-style: italic;
+    }
+    .text-right{
+      text-align: right;
+    }
+    .text-center{
+      text-align: center;
+    }
+    .inv-p p{
+      display: inline-block;
+      text-align: right;
+      padding: 0;
+      margin: 0;
+    }
+    .inv-p{
+    margin-top: 20px;
+    }
+    #inv-spacing{
+      padding-top: 0px;
+    }
+  </style>
+
+</head>
+<body>
+<table width="100%" cellspacing="0" cellpadding="3">
+  <tr>
+    <td width="30%" rowspan="5"><a href="index"> <img src="_assets/img/logo.png"></a> </td>
+    <!-- logo -->
+    <td><h4>Afridi PVT company Name</h4></td>
+    <!-- Company Biller -->
+    <td width="15%" rowspan="5"></td>
+    <td width="15%" class="text-right"><h1 class="invoiceHeading">Invoice Heading here</h1></td>
+  </tr>
+  <tr>
+    <td>Company address1</td>
+  </tr>
+  <tr>
+    <td>CompanyEmail@email.com</td>
+  </tr>
+  <tr>
+    <td>Company fax</td>
+  </tr>
+  <tr>
+    <td >Company phone</td>
+  </tr>
+  <!-- header -->
+  <tr>
+    <td colspan='4'><hr></td>
+  </tr>
+    <tr>
+    <td colspan='4'>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><h4>Bill To heading</h4></td>
+    <td>&nbsp;</td>
+    <td><h4>Invoice info</h4></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <table width="100%" cellspacing="1" cellpadding="3">
+        <tr>
+          <td >Customer address</td>
+          <td >&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Customer_email@email.com</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Customer Mobile Phone</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Customer phone</td>
+          <td>&nbsp;</td>
+        </tr>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+     
+      </table>
+      <!-- Customer Details -->    </td>
+    <td colspan="2">
+      <table width="100%" cellspacing="1" cellpadding="3">
+        <tr>
+          <td>Invoice ID</td>
+          <td class="text-right">777</td>
+        </tr>
+        <tr>
+          <td>Date: </td>
+          <td class="text-right">17-feb-2014</td>
+        </tr>
+       <tr>
+         <td>&nbsp;</td>
+         <td class="text-right">&nbsp;</td>
+       </tr>
+        <tr>
+          <td>Total</td>
+          <td class="text-right">$11 USD</td>
+        </tr>
+        <tr>
+          <td>Paid</td>
+          <td class="text-right">$5</td>
+        </tr>
+        <tr>
+          <td>Balance</td>
+          <td class="text-right">$7 USD</td>
+        </tr>
+      </table> 
+      </td>
+    <!-- Bailer and recever -->
+  </tr>
+  <tr>
+    <td colspan="4"><table id="tblproduct-details" cellspacing="0" width="100%" cellpadding=6>
+      <tr>
+        <th> <h4>Product(s)</h4></th>
+        <th> <h4>Quantity</h4></th>
+        <th> <h4>Price</h4></th>
+        <th> <h4>Tax</h4></th>
+        <th> <h4>Sub Total</h4></th>
+      </tr>
+      <!-- Products Heading -->
+                   <tr>
+                  <td> Flash D</td>
+                   <td class='text-center'>1</td>
+                   <td class="text-right">$10</td>
+                   <td class='text-right'>$1.2</td>
+                   <td class='text-right'>$11</td>
+                   </tr>
+
+                   <tr>
+                     <td colspan='5' class='active desc'>8 gb HP Flash Drive .Fast and Cheap</td>
+                   </tr>
+      <!-- Products Details Details -->
+    </table></td>
+  </tr>
+  <!-- Products details end -->
+  <tr>
+    <td></td>
+    <td></td>
+    <td class="text-right"><strong>Sub Total:<br>Tax:<br>Total:<br></strong> </td>
+    <!-- Total Fields Heading -->
+    <td class="text-right"><strong>$11 USD<br>
+            $1 USD<br>
+            $11 USD<br>
+    </strong> </td>
+    <!-- Total Fields Details -->
+  </tr>
+</table>
+  
+<table width="100%" cellspacing="1" cellpadding="6">
+  <tr>
+    <td><h3>Comments</h3></td>
+  </tr>
+  <tr>
+    <td><p>Nice and Working Fine !</p></td>
+  </tr>
+</table>
+</body>
+</html>
